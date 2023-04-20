@@ -1,7 +1,7 @@
 export async function getBackgroundImage() {
-  const url =
-    'https://api.unsplash.com/photos/random?client_id=O2i326sq5rbgynSMb0RNvC4EbApEpopFiPYeyPJzWx4&query=night-sky&orientation=landscape&count=1';
-  const response = await fetch(url)
+  // const url =
+  //   'https://api.unsplash.com/photos/random?client_id=O2i326sq5rbgynSMb0RNvC4EbApEpopFiPYeyPJzWx4&query=night-sky&orientation=landscape&count=1';
+  const response = await fetch('')
     .then((res) => res.json())
     .then((data) => {
       const imageUrl = data[0].urls.full;

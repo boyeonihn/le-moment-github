@@ -3,10 +3,16 @@ const todoListInput = document.querySelector('.todo-list-input');
 
 const toDosKey = 'todos';
 let toDos =
-  localStorage.getItem(toDosKey) !== '[]'
-    ? JSON.parse(localStorage.getItem(toDosKey))
-    : new Array();
+  localStorage.getItem(toDosKey) === null ||
+  localStorage.getItem(toDosKey) === '[]'
+    ? []
+    : JSON.parse(localStorage.getItem(toDosKey));
+// localStorage.getItem(toDosKey) !== '[]' ||
+// localStorage.getItem(toDosKey) !== null
+//   ? JSON.parse(localStorage.getItem(toDosKey))
+//   : [];
 
+console.log(toDos);
 function saveToDos() {
   localStorage.setItem(toDosKey, JSON.stringify(toDos));
 }
