@@ -1,7 +1,7 @@
 export async function getBackgroundImage() {
-  // const url =
-  //   'https://api.unsplash.com/photos/random?client_id=O2i326sq5rbgynSMb0RNvC4EbApEpopFiPYeyPJzWx4&query=night-sky&orientation=landscape&count=1';
-  const response = await fetch('')
+  const url =
+    'https://api.unsplash.com/photos/random?client_id=O2i326sq5rbgynSMb0RNvC4EbApEpopFiPYeyPJzWx4&query=night-sky&orientation=landscape&count=1';
+  const response = await fetch(url)
     .then((res) => res.json())
     .then((data) => {
       const imageUrl = data[0].urls.full;
@@ -24,6 +24,6 @@ export async function getBackgroundImage() {
           'photoCredit'
         ).innerText = `Photo: Vincentiu Solomon`;
       };
-      bgImg.src = '/public/defaultBackground.jpg';
+      bgImg.src = 'public/defaultBackground.jpg';
     });
 }
