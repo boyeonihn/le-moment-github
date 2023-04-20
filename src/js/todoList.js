@@ -7,12 +7,7 @@ let toDos =
   localStorage.getItem(toDosKey) === '[]'
     ? []
     : JSON.parse(localStorage.getItem(toDosKey));
-// localStorage.getItem(toDosKey) !== '[]' ||
-// localStorage.getItem(toDosKey) !== null
-//   ? JSON.parse(localStorage.getItem(toDosKey))
-//   : [];
 
-console.log(toDos);
 function saveToDos() {
   localStorage.setItem(toDosKey, JSON.stringify(toDos));
 }
