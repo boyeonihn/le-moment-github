@@ -23,7 +23,7 @@
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   background-size: cover;
   overflow-x: hidden;
 }

@@ -22,6 +22,7 @@ footer {
 }
 #todo-container {
   position: relative;
+  padding-right: 30px;
 }
 
 #todo-list {
