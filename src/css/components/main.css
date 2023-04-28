@@ -90,5 +90,5 @@ main {
   font-size: 1.1rem;
   font-weight: 500;
   margin: 10px 0px 0px 0px;
-  height: 30px;
+  max-width: 750px;
 }
