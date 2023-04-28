@@ -25,6 +25,16 @@ const footer = document.querySelector('footer');
 const todoHeading = document.getElementById('todo-heading');
 const todoList = document.getElementById('todo-list');
 
+const nameKey = 'name';
+if (
+  localStorage.getItem(nameKey) === null ||
+  localStorage.getItem(nameKey) === ''
+) {
+} else {
+  username = localStorage.getItem(nameKey);
+  switchToLoginMode();
+}
+
 const submitName = (event) => {
   event.preventDefault();
   if (loginForm.querySelector('input').value.length === 0) {
@@ -32,6 +42,7 @@ const submitName = (event) => {
     return;
   }
   username = loginForm.querySelector('input').value;
+  localStorage.setItem(nameKey, username);
   switchToLoginMode();
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 };
