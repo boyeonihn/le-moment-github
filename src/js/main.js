@@ -33,6 +33,7 @@ if (
 } else {
   username = localStorage.getItem(nameKey);
   switchToLoginMode();
+  navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 }
 
 const submitName = (event) => {
